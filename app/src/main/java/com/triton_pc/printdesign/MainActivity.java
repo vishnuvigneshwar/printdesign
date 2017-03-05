@@ -34,18 +34,18 @@ public class MainActivity extends AppCompatActivity {
         top_outpot+= fitcenter("---------", printer_colume_size, 0);
         top_outpot+= fitLeft("C. Name: "+customername, printer_colume_size);
         top_outpot+= fitcenter("--------------------------------", printer_colume_size, 0);
-        top_outpot+= fitLeftHalf("S#", 2) +fitLeftHalf("Item", printer_colume_size-18)+fitLeftHalf("Qty", 4)+fitLeftHalf("RATE", 6)+fitLeftHalf(" AMT", 6)+"\n" ;
+        top_outpot+= fitLeftHalf("S#", 2) +fitLeftHalf("Item", printer_colume_size-16)+fitLeftHalf("Qty", 4)+fitLeftHalf("RATE", 6)+fitLeftHalf(" AMT", 6)+"\n" ;
         top_outpot+= fitcenter("--------------------------------", printer_colume_size, 0);
         int totalqty = 0;
         int total  = 0;
-        for(int i = 0 ; i < 10; i ++){
+        for(int i = 0 ; i < 75; i ++){
             Random r = new Random();
             int qty = r.nextInt(10 - 1);
             totalqty+=qty;
             int cost = r.nextInt(100 - 10);
             int amt = cost * qty;
             total +=amt;
-            top_outpot+= fitLeftHalf(""+i, 2) +fitLeftHalf("Product "+i, printer_colume_size-18)+fitLeftHalf(""+qty, 3)+" "+fitLeftHalf(""+cost+".0", 6)+" "+fitLeftHalf(""+amt+".0", 6)+"\n" ;
+            top_outpot+= fitLeftHalf(""+i, 2) +fitLeftHalf("Product "+i, printer_colume_size-16)+fitLeftHalf(""+qty, 3)+" "+fitLeftHalf(""+cost+".0", 6)+" "+fitLeftHalf(""+amt+".0", 6)+"\n" ;
         }
         top_outpot+= fitcenter("--------------------------------", printer_colume_size, 0);
         top_outpot+= fitLeft("Total Qty: "+totalqty, printer_colume_size);
